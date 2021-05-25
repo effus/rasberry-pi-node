@@ -1,26 +1,14 @@
-const finalhandler = require('finalhandler');
-const http = require('http');
-const Router = require('router');
-const fs = require('fs');
-
-//const hostname = '0.0.0.0';
+const express = require('express');
+const path = require('path');
+const app = express();
 const port = 8080;
 
-var router = Router();
-
-router.get('/', function (req, res) {
-    res.setHeader('Content-Type', 'text/html; charset=utf-8');
-    fs.readFile('./html/index.html', null, function (error, data) {
-        if (error) return done(error);
-        res.write(data);
-        res.end();
-    });
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
 
-var server = http.createServer(function(req, res) {
-    router(req, res, finalhandler(req, res))
-});
+app.use(express.static('dist'));
 
-server.listen(port, () => {
-  console.log(`Server running at ${port}`);
-});
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
