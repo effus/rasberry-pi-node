@@ -1,22 +1,16 @@
 <template>
-  <div id="app">
+  <b-container fluid>
+    <v-menu></v-menu>
     <router-view/>
-  </div>
+  </b-container>
 </template>
 
 <script>
+import Menu from './components/Menu';
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'v-menu': Menu
+  }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
