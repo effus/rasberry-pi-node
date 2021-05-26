@@ -1,21 +1,21 @@
-# frontend
+# Rasberry Pi + Node JS
 
-> A Vue.js project
+<img src="docs/photo_2021-05-26_22-49-38.jpg" style="zoom:50%;" />
 
-## Build Setup
+ 
+
+## Build 
 
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# front with vue-dev-server
+npm run front-dev
 
-# build for production with minification
-npm run build
+# front build
+npm run built-front
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# run backend
+npm run back-dev
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
